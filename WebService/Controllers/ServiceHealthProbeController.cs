@@ -16,7 +16,7 @@ namespace WebService.Controllers
         public IActionResult Get()
         {
             if (_serviceHealthProbe.IsShuttingDown == false)
-                return Ok();
+                return Ok("Everything is running smooth");
             else
                 return StatusCode(503, "Service terminating - stop sending requests");
         }
