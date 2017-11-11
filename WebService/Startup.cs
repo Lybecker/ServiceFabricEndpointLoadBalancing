@@ -48,7 +48,7 @@ namespace WebService
 
             serviceHealthStatus.IsShuttingDown = true;
 
-            System.Threading.Thread.Sleep(10000);
+            System.Threading.Thread.Sleep(30000);
 
             ServiceEventSource.Current.Message($"Shutdown process complete. Node: {Environment.GetEnvironmentVariable("HostedServiceName")}");
         }
